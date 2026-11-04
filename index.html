@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AI와 함께 일본어와 영어를 배우는 개인 학습 포트폴리오">
+<title>인공지능으로 일본어, 영어공부 | 나의 세상, 나의 Study</title>
+<style>
+:root{--ink:#29243c;--muted:#746e82;--lav:#7660c8;--pink:#f7b7b4;--bg:#fcfaf7;--card:#fff;--line:#e9e3ed}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Pretendard,'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}header{position:sticky;top:0;z-index:10;background:#fcfaf7eF;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{max-width:1120px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:calc(19px * var(--text-scale));font-weight:850;letter-spacing:-.7px}.brand span{color:var(--lav)}nav{display:flex;gap:24px;flex-wrap:wrap}nav a{font-size:calc(13px * var(--text-scale));font-weight:700;color:#5c536d}nav a:hover{color:var(--lav)}main{overflow:hidden}.wrap{max-width:1120px;margin:auto;padding:0 24px}.hero{background:radial-gradient(circle at 80% 30%,#f8d8e3 0,transparent 35%),linear-gradient(135deg,#f6f0ff,#fff9f4 65%,#fff);padding:100px 0 110px}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}.eyebrow{display:inline-block;border-radius:30px;background:#fff;padding:8px 16px;color:var(--lav);font-size:calc(13px * var(--text-scale));font-weight:800;box-shadow:0 6px 24px #68559a12}.hero h1{font-size:calc(clamp(42px,6vw,78px) * var(--text-scale));line-height:1.18;letter-spacing:-3px;margin:26px 0}.hero h1 em{font-style:normal;color:var(--lav)}.hero p{font-size:calc(18px * var(--text-scale));color:var(--muted);max-width:540px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{border:1px solid var(--lav);border-radius:14px;padding:13px 22px;font-weight:750;display:inline-flex;align-items:center;justify-content:center;transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px #7660c82b}.primary{background:var(--lav);color:white}.secondary{background:#fff;color:var(--lav)}.visual{position:relative;min-height:370px;display:grid;place-items:center}.blob{width:min(100%,350px);aspect-ratio:1;background:linear-gradient(145deg,#d9caff,#ffd5d1);border-radius:42% 58% 55% 45%/45% 40% 60% 55%;display:grid;place-items:center;box-shadow:0 28px 70px #6b5d9933;animation:float 5s ease-in-out infinite}.blob .emoji{font-size:calc(110px * var(--text-scale))}.float-label{position:absolute;background:white;padding:12px 18px;border-radius:16px;box-shadow:0 12px 32px #3b275e20;font-size:calc(14px * var(--text-scale));font-weight:800}.label-a{top:30px;left:0}.label-b{bottom:35px;right:0}@keyframes float{50%{transform:translateY(-12px)}}section.content{padding:90px 0}.section-kicker{color:var(--lav);font-size:calc(13px * var(--text-scale));font-weight:850;letter-spacing:2px}.section-title{font-size:calc(clamp(29px,4vw,42px) * var(--text-scale));letter-spacing:-1.4px;margin:8px 0 14px}.section-desc{color:var(--muted);margin:0 0 36px}.about{display:grid;grid-template-columns:260px 1fr;gap:42px;align-items:center}.photo{aspect-ratio:1;background:linear-gradient(135deg,#eae1ff,#ffe6df);border:2px dashed #b6a4d6;border-radius:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#74648f;text-align:center;gap:8px}.photo strong{font-size:calc(54px * var(--text-scale))}.photo small{font-size:calc(13px * var(--text-scale))}.tags{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.tag{border-radius:30px;background:#f1ebff;color:#6752b2;padding:7px 13px;font-size:calc(13px * var(--text-scale));font-weight:700}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:0 10px 35px #30234508;transition:transform .2s}.card:hover{transform:translateY(-5px)}.card .icon{font-size:calc(38px * var(--text-scale))}.card h3{font-size:calc(21px * var(--text-scale));margin:16px 0 10px}.card p{color:var(--muted);margin:0}.tinted{background:#f7f3ff}.notes{display:grid;grid-template-columns:1fr 1fr;gap:26px}.note-form,.note-list{background:white;border:1px solid var(--line);border-radius:24px;padding:26px}.note-form label{display:block;font-weight:750;font-size:calc(14px * var(--text-scale));margin:0 0 7px}.field{width:100%;border:1px solid #ded7e7;border-radius:12px;background:#fff;padding:12px 14px;margin-bottom:18px;color:var(--ink)}.field:focus{outline:2px solid #c9b9fa;border-color:var(--lav)}textarea.field{min-height:132px;resize:vertical}.note-item{padding:16px 0;border-bottom:1px solid var(--line)}.note-item:first-child{padding-top:0}.note-item:last-child{border-bottom:0}.note-item strong{display:block}.note-item small{color:var(--muted)}.note-item p{white-space:pre-wrap;overflow-wrap:anywhere;margin:8px 0}.delete{border:0;background:#fff0f0;color:#a64454;border-radius:8px;padding:5px 10px;font-size:calc(12px * var(--text-scale))}.empty{color:var(--muted)}.contact-box{text-align:center;background:linear-gradient(120deg,#eee7ff,#fff0eb);padding:58px 20px;border-radius:30px}.contact-box p{color:var(--muted)}footer{text-align:center;padding:32px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:calc(13px * var(--text-scale))}.hint{font-size:calc(12px * var(--text-scale));color:var(--muted);margin-top:10px}@media(max-width:800px){.hero{padding:70px 0}.hero-grid{grid-template-columns:1fr;gap:24px}.visual{min-height:300px}.blob{width:260px}.about{grid-template-columns:1fr}.photo{max-width:260px}.cards{grid-template-columns:1fr}.notes{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column;gap:10px}nav{gap:14px}.hero h1{letter-spacing:-2px}}@media(max-width:420px){nav a{font-size:calc(11px * var(--text-scale))}.hero p{font-size:calc(16px * var(--text-scale))}.float-label{font-size:calc(12px * var(--text-scale))}.label-a{left:2px}.label-b{right:2px}section.content{padding:65px 0}}
+
+/* 접근성 도구: 기존 디자인은 유지하고 설정에 따라 글자만 조정합니다. */
+:root{--text-scale:1}
+.nav{flex-wrap:wrap}
+.view-tools{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-left:auto}
+.view-tools button{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:7px 10px;font-size:calc(12px * var(--text-scale));font-weight:700;white-space:nowrap}
+.view-tools button:hover,.view-tools button:focus-visible{border-color:var(--lav);outline-offset:2px}
+body.dark{--ink:#f3effc;--muted:#c8bfd9;--lav:#c4b0ff;--bg:#171321;--card:#282236;--line:#494053}
+body.dark header{background:#171321ef}
+body.dark nav a{color:#ddd4ef}
+body.dark .hero{background:radial-gradient(circle at 80% 30%,#49304b 0,transparent 35%),linear-gradient(135deg,#251c39,#241d2a 65%,#171321)}
+body.dark .eyebrow,body.dark .float-label,body.dark .card,body.dark .note-form,body.dark .note-list{background:var(--card);color:var(--ink)}
+body.dark .tinted{background:#211a31}
+body.dark .tag{background:#41325d;color:#e7d9ff}
+body.dark .field{background:#211b2c;border-color:#645873;color:var(--ink)}
+body.dark .field::placeholder{color:#b7acc5}
+body.dark .secondary{background:#30263f;color:#e0d4ff}
+body.dark .contact-box{background:linear-gradient(120deg,#312648,#412a3b)}
+body.dark .delete{background:#4c2838;color:#ffd6df}
+body.dark .photo{background:linear-gradient(135deg,#423459,#583b4a);color:#f3e9ff;border-color:#8a76a5}
+body.dark .blob{background:linear-gradient(145deg,#675388,#865a77)}
+body.dark .primary{background:#7558be;border-color:#a68be6;color:#fff}
+@media(max-width:800px){.view-tools{margin-left:0}}
+
+/* 연말 D-day 알림: 기존 레이아웃 위에 한 줄 추가 */
+.countdown-bar{background:linear-gradient(90deg,#eee7ff,#ffece8);border-bottom:1px solid var(--line);color:#49386f;text-align:center;padding:11px 18px;font-size:calc(14px * var(--text-scale));font-weight:750}
+.countdown-bar strong{color:#6d4cbb;font-size:calc(19px * var(--text-scale));padding:0 5px}
+body.dark .countdown-bar{background:linear-gradient(90deg,#342847,#47303e);color:#eee5ff}
+body.dark .countdown-bar strong{color:#dfcaff}
+
+/* 서울 현재 날씨: 연말 카운트다운 아래 한 줄만 추가 */
+.weather-bar{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;text-align:center;padding:11px 18px;background:var(--card);border-bottom:1px solid var(--line);color:var(--ink);font-size:calc(14px * var(--text-scale));font-weight:700}
+.weather-bar strong{color:var(--lav);font-size:calc(18px * var(--text-scale))}
+.weather-bar small{color:var(--muted);font-size:calc(11px * var(--text-scale));font-weight:500}
+.weather-bar button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:3px 9px;font-size:calc(12px * var(--text-scale))}
+.weather-bar button:hover{border-color:var(--lav)}
+
+/* 추억 사진 갤러리 */
+.memory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.memory-card{margin:0;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:14px;box-shadow:0 10px 35px #30234508}
+.memory-open{display:block;width:100%;padding:0;border:0;background:#f1ebff;border-radius:15px;overflow:hidden;cursor:zoom-in}
+.memory-open img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .25s}
+.memory-open:hover img{transform:scale(1.04)}
+.memory-card figcaption{padding:13px 5px 5px;text-align:center;color:var(--muted);font-size:calc(14px * var(--text-scale));}
+.memory-fallback{display:none;aspect-ratio:4/3;align-items:center;justify-content:center;text-align:center;padding:14px;color:#6752b2;background:#f1ebff}
+.memory-open.missing img{display:none}.memory-open.missing .memory-fallback{display:flex}
+.memory-dialog{border:0;padding:0;background:transparent;color:#fff;max-width:95vw;max-height:95vh;overflow:visible}
+.memory-dialog::backdrop{background:rgba(15,11,24,.88)}
+.memory-dialog-inner{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px}
+.memory-dialog img{display:block;max-width:90vw;max-height:80vh;object-fit:contain;border-radius:12px}
+.memory-dialog p{margin:0;text-align:center}
+.memory-close{position:absolute;right:0;top:-44px;border:1px solid #ffffff80;background:#252033;color:#fff;border-radius:20px;padding:6px 14px}
+body.dark .memory-fallback{background:#41325d;color:#e7d9ff}
+@media(max-width:650px){.memory-grid{grid-template-columns:1fr}.memory-card{max-width:480px;width:100%;margin:auto}}
+
+/* 방명록: 기존 카드와 입력창 디자인 재사용 */
+.guestbook-card {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 30px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 10px 35px #30234508;
+}
+.guestbook-card label {
+  display: block;
+  font-weight: 750;
+  margin-bottom: 7px;
+}
+.guestbook-card .field {
+  display: block;
+}
+.guestbook-card .btn {
+  width: 100%;
+}
+body.dark .guestbook-card {
+  background: var(--card);
+  color: var(--ink);
+}
+@media (max-width: 650px) {
+  .guestbook-card { padding: 22px; }
+}
+
+</style>
+</head>
+<body>
+<div class="countdown-bar" role="status" aria-live="off"><span>📅 올해 연말 · 2026년 12월 31일까지 </span><strong id="yearEndCountdown">계산 중...</strong><span id="yearEndDetail"></span></div>
+<div class="weather-bar" role="status" aria-live="polite" aria-label="서울 현재 날씨">
+  <span>📍 서울 현재 날씨</span>
+  <strong id="seoulWeather">불러오는 중...</strong>
+  <small id="weatherUpdated"></small>
+  <button type="button" id="refreshWeather" aria-label="서울 날씨 새로고침">↻ 새로고침</button>
+</div>
+<header><div class="nav"><a class="brand" href="#home">My <span>Study.</span></a><nav aria-label="주요 메뉴"><a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#study">MY STUDY</a><a href="#notes">STUDY NOTE</a><a href="#memories">추억 사진</a><a href="#contact">CONTACT</a></nav><div class="view-tools" role="group" aria-label="화면 보기 설정"><button id="biggerText" type="button">글씨 크게</button><button id="smallerText" type="button">글씨 작게</button><button id="toggleDark" type="button" aria-pressed="false">어둡게</button><button id="toggleMusic" type="button" aria-pressed="false">♫ 음악 켜기</button></div></div></header>
+<!-- 같은 폴더의 음악 파일을 반복 재생합니다. 자동 재생은 하지 않습니다. -->
+<audio id="backgroundMusic" src="music.mp3" loop preload="none"></audio>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid"><div><span class="eyebrow">✦ AI × LANGUAGE LEARNING</span><h1>나의 세상,<br>나의 <em>Study</em></h1><p>새로운 기술을 배우고, 새로운 언어로 세상을 넓혀갑니다. AI와 함께하는 일본어·영어 공부의 기록 공간입니다.</p><div class="actions"><a class="btn primary" href="#study">나의 공부 살펴보기 →</a><a class="btn secondary" href="#about">저를 소개합니다</a></div></div><div class="visual" aria-label="책과 학습을 상징하는 일러스트 자리"><div class="blob"><span class="emoji" aria-hidden="true">📚</span></div><div class="float-label label-a">🤖 AI Learning</div><div class="float-label label-b">🌸 日本語 · English</div></div></div></section>
+<section class="content" id="about"><div class="wrap"><span class="section-kicker">01 / ABOUT ME</span><h2 class="section-title">배움을 즐기는 사람</h2><div class="about"><div class="photo" role="img" aria-label="프로필 사진 자리표시자"><strong>📷</strong><span>프로필 사진 자리</span><small>나중에 사진으로 교체하세요</small></div><div><h3>안녕하세요!</h3><p>저는 <strong>AI 교육생이자 일본어 수강생</strong>입니다. AI 트렌드를 알아가고 일본어를 공부하는 데 관심이 있습니다. 이곳은 배우고 익힌 내용을 하나씩 기록하는 저만의 공간입니다.</p><div class="tags"><span class="tag">AI 교육생</span><span class="tag">일본어 수강생</span><span class="tag">AI 트렌드</span><span class="tag">외국어 공부</span></div><a class="btn secondary" href="#contact">연락하기 →</a></div></div></div></section>
+<section class="content tinted" id="study"><div class="wrap"><span class="section-kicker">02 / MY STUDY</span><h2 class="section-title">지금 관심 있는 공부</h2><p class="section-desc">호기심을 따라 차근차근 배워가는 주제들입니다.</p><div class="cards"><article class="card"><div class="icon">🤖</div><h3>AI 트렌드</h3><p>새롭게 등장하는 인공지능 기술과 활용 방법에 관심을 가지고 배웁니다.</p></article><article class="card"><div class="icon">🌸</div><h3>일본어 공부</h3><p>일본어 수업에서 배우는 표현과 일상 회화를 차곡차곡 익혀갑니다.</p></article><article class="card"><div class="icon">🌍</div><h3>영어 공부</h3><p>AI를 활용해 영어도 함께 공부할 수 있는 방법을 탐색하는 공간입니다.</p></article></div></div></section>
+<section class="content" id="notes"><div class="wrap"><span class="section-kicker">03 / STUDY NOTE</span><h2 class="section-title">오늘의 학습 노트</h2><p class="section-desc">배운 내용을 간단히 남겨보세요. 메모는 현재 사용하는 브라우저에만 저장됩니다.</p><div class="notes"><form class="note-form" id="noteForm"><label for="topic">공부 주제</label><select class="field" id="topic"><option>AI</option><option>일본어</option><option>영어</option><option>기타</option></select><label for="noteTitle">제목</label><input class="field" id="noteTitle" maxlength="80" required placeholder="예: 오늘 배운 일본어 표현"><label for="noteBody">학습 내용</label><textarea class="field" id="noteBody" maxlength="3000" required placeholder="오늘 배운 내용을 적어보세요."></textarea><button class="btn primary" type="submit">노트 저장하기</button><p class="hint">※ 다른 기기와 동기화되지 않으며, 브라우저 데이터 삭제 시 메모도 사라질 수 있습니다.</p></form><div class="note-list"><h3 style="margin-top:0">📒 저장한 노트</h3><div id="savedNotes" aria-live="polite"></div></div></div></div></section>
+
+<!-- 새로 추가한 추억 사진 섹션: 사진 파일은 index.html과 같은 폴더에 넣으세요. -->
+<section class="content tinted" id="memories">
+  <div class="wrap">
+    <span class="section-kicker">04 / MEMORIES</span>
+    <h2 class="section-title">추억 사진</h2>
+    <p class="section-desc">사진을 클릭하면 크게 볼 수 있습니다.</p>
+    <div class="memory-grid">
+      <figure class="memory-card">
+        <button class="memory-open" type="button" data-photo="photo1.jpg" data-caption="첫 번째 추억 사진 설명을 입력해 주세요." aria-label="첫 번째 사진 크게 보기">
+          <img src="photo1.jpg" alt="첫 번째 추억 사진" loading="lazy">
+          <span class="memory-fallback">📷 photo1.jpg<br>사진을 넣어 주세요</span>
+        </button>
+        <figcaption>첫 번째 추억 사진 설명을 입력해 주세요.</figcaption>
+      </figure>
+      <figure class="memory-card">
+        <button class="memory-open" type="button" data-photo="photo2.jpg" data-caption="두 번째 추억 사진 설명을 입력해 주세요." aria-label="두 번째 사진 크게 보기">
+          <img src="photo2.jpg" alt="두 번째 추억 사진" loading="lazy">
+          <span class="memory-fallback">📷 photo2.jpg<br>사진을 넣어 주세요</span>
+        </button>
+        <figcaption>두 번째 추억 사진 설명을 입력해 주세요.</figcaption>
+      </figure>
+      <figure class="memory-card">
+        <button class="memory-open" type="button" data-photo="photo3.jpg" data-caption="세 번째 추억 사진 설명을 입력해 주세요." aria-label="세 번째 사진 크게 보기">
+          <img src="photo3.jpg" alt="세 번째 추억 사진" loading="lazy">
+          <span class="memory-fallback">📷 photo3.jpg<br>사진을 넣어 주세요</span>
+        </button>
+        <figcaption>세 번째 추억 사진 설명을 입력해 주세요.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+<dialog class="memory-dialog" id="memoryDialog" aria-label="사진 크게 보기">
+  <div class="memory-dialog-inner">
+    <button class="memory-close" id="closeMemory" type="button">✕ 닫기</button>
+    <img id="largeMemory" alt="확대된 추억 사진">
+    <p id="largeMemoryCaption"></p>
+  </div>
+</dialog>
+<section class="content" id="contact"><div class="wrap"><div class="contact-box"><span class="section-kicker">04 / CONTACT</span><h2 class="section-title">함께 이야기해요</h2><p>AI와 외국어 공부에 관심이 있다면 이메일로 연락해 주세요.</p><a class="btn primary" href="mailto:xfurud@gmail.com">✉️ xfurud@gmail.com</a></div></div></section>
+
+<!-- 방명록: Netlify에 배포하면 제출 내역이 Netlify Forms에 저장됩니다 -->
+<section class="content tinted" id="guestbook">
+  <div class="wrap">
+    <span class="section-kicker">06 / GUESTBOOK</span>
+    <h2 class="section-title">방명록</h2>
+    <p class="section-desc">방문해 주셔서 감사합니다. 이름과 남기고 싶은 말을 적어 주세요.</p>
+
+    <form class="guestbook-card" name="guestbook" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="guestbook">
+
+      <label for="guestName">이름</label>
+      <input class="field" id="guestName" name="name" type="text"
+             maxlength="60" autocomplete="name" required
+             placeholder="이름을 입력해 주세요">
+
+      <label for="guestMessage">남길 말</label>
+      <textarea class="field" id="guestMessage" name="message"
+                maxlength="2000" required
+                placeholder="따뜻한 한마디를 남겨 주세요"></textarea>
+
+      <button class="btn primary" type="submit">남기기</button>
+      <p class="hint">※ 제출한 글은 사이트에 공개되지 않고 Netlify Forms로 전달됩니다.</p>
+    </form>
+  </div>
+</section>
+
+</main><footer>© <span id="year"></span> My Study. AI와 함께 배우는 나의 기록.</footer>
+<script>
+'use strict';
+document.getElementById('year').textContent=new Date().getFullYear();
+const KEY='my-study-notes-v1';
+function getNotes(){try{const v=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(v)?v:[]}catch{return []}}
+function renderNotes(){const root=document.getElementById('savedNotes');root.replaceChildren();const notes=getNotes();if(!notes.length){const p=document.createElement('p');p.className='empty';p.textContent='아직 저장한 노트가 없습니다. 첫 번째 기록을 남겨보세요!';root.append(p);return}notes.forEach((n,i)=>{const box=document.createElement('article');box.className='note-item';const title=document.createElement('strong');title.textContent=n.title;const meta=document.createElement('small');meta.textContent=n.topic+' · '+n.date;const body=document.createElement('p');body.textContent=n.body;const del=document.createElement('button');del.className='delete';del.type='button';del.textContent='삭제';del.setAttribute('aria-label',n.title+' 노트 삭제');del.addEventListener('click',()=>{if(!confirm('이 노트를 삭제할까요?'))return;const list=getNotes();list.splice(i,1);localStorage.setItem(KEY,JSON.stringify(list));renderNotes()});box.append(title,meta,body,del);root.append(box)})}
+document.getElementById('noteForm').addEventListener('submit',e=>{e.preventDefault();const title=document.getElementById('noteTitle').value.trim();const body=document.getElementById('noteBody').value.trim();if(!title||!body)return;const notes=getNotes();notes.unshift({topic:document.getElementById('topic').value,title,body,date:new Date().toLocaleDateString('ko-KR')});try{localStorage.setItem(KEY,JSON.stringify(notes));e.target.reset();renderNotes()}catch{alert('저장 공간이 부족하거나 브라우저에서 저장이 차단되었습니다.')}});
+renderNotes();
+// 보기 설정은 이 브라우저에 보관하며 버튼을 누르면 즉시 반영됩니다.
+const VIEW_KEY='my-study-view-v1';
+let textScale=1;
+let darkMode=false;
+try{const saved=JSON.parse(localStorage.getItem(VIEW_KEY)||'{}');if(typeof saved.scale==='number'&&Number.isFinite(saved.scale))textScale=Math.min(1.4,Math.max(.8,saved.scale));darkMode=saved.dark===true}catch{}
+function applyView(){document.documentElement.style.setProperty('--text-scale',String(textScale));document.body.classList.toggle('dark',darkMode);document.getElementById('toggleDark').textContent=darkMode?'밝게':'어둡게';document.getElementById('toggleDark').setAttribute('aria-pressed',String(darkMode));try{localStorage.setItem(VIEW_KEY,JSON.stringify({scale:textScale,dark:darkMode}))}catch{}}
+document.getElementById('biggerText').addEventListener('click',()=>{textScale=Math.min(1.4,Math.round((textScale+.1)*10)/10);applyView()});
+document.getElementById('smallerText').addEventListener('click',()=>{textScale=Math.max(.8,Math.round((textScale-.1)*10)/10);applyView()});
+document.getElementById('toggleDark').addEventListener('click',()=>{darkMode=!darkMode;applyView()});
+applyView();
+
+// 방문자의 기기 날짜에 맞춰 연말까지 남은 일수를 계산합니다.
+// UTC 날짜 구성요소를 이용해 서머타임과 하루 23/25시간 문제를 피합니다.
+function updateYearEndCountdown(){
+  const today=new Date();
+  const todayDay=Date.UTC(today.getFullYear(),today.getMonth(),today.getDate());
+  const targetDay=Date.UTC(2026,11,31);
+  const remaining=Math.round((targetDay-todayDay)/86400000);
+  const count=document.getElementById('yearEndCountdown');
+  const detail=document.getElementById('yearEndDetail');
+  if(remaining>0){count.textContent='D-'+remaining;detail.textContent=' ('+remaining+'일 남았어요!)';}
+  else if(remaining===0){count.textContent='D-DAY';detail.textContent=' (바로 오늘이에요!)';}
+  else{count.textContent='D+'+Math.abs(remaining);detail.textContent=' (연말이 지났어요)';}
+}
+updateYearEndCountdown();
+// 페이지를 오래 열어 놓아도 날짜가 바뀌면 값이 갱신됩니다.
+setInterval(updateYearEndCountdown,60000);
+
+// 서울 현재 날씨 — Open-Meteo 무료 API (API 키 불필요)
+// 서울시청 인근 좌표, 시간대는 서울 기준으로 고정합니다.
+const WEATHER_URL='https://api.open-meteo.com/v1/forecast?latitude=37.5665&longitude=126.9780&current=temperature_2m,weather_code,is_day&timezone=Asia%2FSeoul';
+function weatherDescription(code,isDay){
+  if(code===0)return isDay?'☀️ 맑음':'🌙 맑음';
+  if(code===1)return '🌤️ 대체로 맑음';
+  if(code===2)return '⛅ 구름 조금';
+  if(code===3)return '☁️ 흐림';
+  if(code===45||code===48)return '🌫️ 안개';
+  if([51,53,55,56,57].includes(code))return '🌦️ 이슬비';
+  if([61,63,65,66,67,80,81,82].includes(code))return '🌧️ 비';
+  if([71,73,75,77,85,86].includes(code))return '🌨️ 눈';
+  if([95,96,99].includes(code))return '⛈️ 뇌우';
+  return '🌡️ 날씨 정보';
+}
+let weatherLoading=false;
+async function loadSeoulWeather(){
+  if(weatherLoading)return;
+  weatherLoading=true;
+  const output=document.getElementById('seoulWeather');
+  const updated=document.getElementById('weatherUpdated');
+  const button=document.getElementById('refreshWeather');
+  button.disabled=true;
+  output.textContent='불러오는 중...';
+  updated.textContent='';
+  try{
+    const response=await fetch(WEATHER_URL,{cache:'no-store'});
+    if(!response.ok)throw new Error('날씨 응답 오류');
+    const data=await response.json();
+    const c=data.current;
+    if(!c||!Number.isFinite(c.temperature_2m)||!Number.isInteger(c.weather_code))throw new Error('날씨 자료 없음');
+    output.textContent=weatherDescription(c.weather_code,c.is_day===1)+' · '+c.temperature_2m.toFixed(1)+'°C';
+    updated.textContent=c.time?('기준: '+c.time.slice(11,16)+' KST · Open-Meteo'):'제공: Open-Meteo';
+  }catch(error){
+    output.textContent='날씨를 불러오지 못했습니다';
+    updated.textContent='인터넷 연결을 확인해 주세요.';
+  }finally{
+    weatherLoading=false;
+    button.disabled=false;
+  }
+}
+document.getElementById('refreshWeather').addEventListener('click',loadSeoulWeather);
+loadSeoulWeather();
+// 최신 정보 확인: 15분마다 다시 요청
+setInterval(loadSeoulWeather,15*60*1000);
+
+// 추억 사진 확대 보기 (ESC 또는 바깥 영역 클릭으로 닫기)
+const memoryDialog=document.getElementById('memoryDialog');
+const largeMemory=document.getElementById('largeMemory');
+const largeMemoryCaption=document.getElementById('largeMemoryCaption');
+document.querySelectorAll('.memory-open').forEach(button=>{
+  const image=button.querySelector('img');
+  image.addEventListener('error',()=>{button.classList.add('missing');button.disabled=true;});
+  button.addEventListener('click',()=>{
+    if(button.classList.contains('missing'))return;
+    largeMemory.src=button.dataset.photo;
+    largeMemory.alt=image.alt;
+    largeMemoryCaption.textContent=button.dataset.caption;
+    memoryDialog.showModal();
+  });
+});
+document.getElementById('closeMemory').addEventListener('click',()=>memoryDialog.close());
+memoryDialog.addEventListener('click',event=>{if(event.target===memoryDialog)memoryDialog.close();});
+// 배경 음악 켜기 / 끄기
+const backgroundMusic = document.getElementById('backgroundMusic');
+const musicButton = document.getElementById('toggleMusic');
+function updateMusicButton() {
+  const playing = !backgroundMusic.paused;
+  musicButton.textContent = playing ? '♫ 음악 끄기' : '♫ 음악 켜기';
+  musicButton.setAttribute('aria-pressed', String(playing));
+}
+musicButton.addEventListener('click', async () => {
+  if (!backgroundMusic.paused) {
+    backgroundMusic.pause();
+    backgroundMusic.currentTime = 0;
+  } else {
+    try {
+      await backgroundMusic.play();
+    } catch (error) {
+      alert('music.mp3 파일이 같은 폴더에 있는지 확인해 주세요.');
+    }
+  }
+  updateMusicButton();
+});
+backgroundMusic.addEventListener('play', updateMusicButton);
+backgroundMusic.addEventListener('pause', updateMusicButton);
+backgroundMusic.addEventListener('error', () => {
+  updateMusicButton();
+  alert('음악 파일을 열 수 없습니다. music.mp3 파일을 확인해 주세요.');
+});
+</script>
+</body>
+</html>
